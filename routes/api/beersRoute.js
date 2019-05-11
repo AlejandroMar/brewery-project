@@ -1,6 +1,6 @@
 const express = require('express');
 const axios = require('axios');
-const config = require('../config/config.json');
+const config = require('../../config/config.json');
 // const chalk = require('chalk');
 // const debug = require('debug')('server');
 

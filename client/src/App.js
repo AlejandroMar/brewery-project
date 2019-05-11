@@ -23,7 +23,6 @@ class App extends React.Component {
   };
 
   componentDidMount() {
-    return;
     // check if user types /1 or /1/:id in url
     // there is a small problem when url has /1 on componentDidMount
     // needs to be fixed
@@ -36,7 +35,7 @@ class App extends React.Component {
       const { pageNumber } = this.state;
       (async () => {
         try {
-          const listOfBeers = await axios.get('/beers/', {
+          const listOfBeers = await axios.get('/api/beers/', {
             params: {
               page: pageNumber,
             },
@@ -66,7 +65,7 @@ class App extends React.Component {
         await this.setState({ isLoading: true });
 
         const { pageNumber } = this.state;
-        const listOfBeers = await axios.get('/beers/', {
+        const listOfBeers = await axios.get('/api/beers/', {
           params: {
             page: pageNumber,
           },
@@ -208,7 +207,7 @@ class App extends React.Component {
 }
 
 App.propTypes = {
-  location: PropTypes.string.isRequired,
+  location: PropTypes.object.isRequired,
 };
 
 // I need withRouter because it App is not inside a Route but it needs

@@ -5,11 +5,13 @@ const debug = require('debug')('server');
 const morgan = require('morgan');
 const bodyParser = require('body-parser');
 const path = require('path');
+const cors = require('cors')
 
-const beersRouter = require('./routes/beersRoute');
+const beersRouter = require('./routes/api/beersRoute');
 
 
 const app = express();
+app.use(cors());
 
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
