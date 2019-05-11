@@ -35,14 +35,11 @@ class App extends React.Component {
       const { pageNumber } = this.state;
       (async () => {
         try {
-          const listOfBeers = await axios.get(
-            'https://protected-reef-62125.herokuapp.com/api/beers/',
-            {
-              params: {
-                page: pageNumber,
-              },
-            }
-          );
+          const listOfBeers = await axios.get('/api/beers/', {
+            params: {
+              page: pageNumber,
+            },
+          });
           await this.setState({
             beerList: listOfBeers.data,
             isLoading: false,
@@ -68,14 +65,11 @@ class App extends React.Component {
         await this.setState({ isLoading: true });
 
         const { pageNumber } = this.state;
-        const listOfBeers = await axios.get(
-          'https://protected-reef-62125.herokuapp.com/api/beers/',
-          {
-            params: {
-              page: pageNumber,
-            },
-          }
-        );
+        const listOfBeers = await axios.get('/api/beers/', {
+          params: {
+            page: pageNumber,
+          },
+        });
 
         this.setState({
           beerList: listOfBeers.data,
