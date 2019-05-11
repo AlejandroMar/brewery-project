@@ -17,20 +17,21 @@ function BeerTable(props) {
           </tr>
         </thead>
         <tbody>
-          {beerList.map(beer => (
-            <tr key={beer.id}>
-              <td>
-                <Link to={`/${pageNumber}/${beer.id}`}>
-                  <img src={beer.labels ? beer.labels.icon : '#'} alt="" />
-                </Link>
-              </td>
-              <td>
-                <Link to={`/${pageNumber}/${beer.id}`}>{beer.name}</Link>
-              </td>
-              <td>{beer.abv || 'N/A'}</td>
-              <td>{beer.ibu || 'N/A'}</td>
-            </tr>
-          ))}
+          {beerList &&
+            beerList.map(beer => (
+              <tr key={beer.id}>
+                <td>
+                  <Link to={`/${pageNumber}/${beer.id}`}>
+                    <img src={beer.labels ? beer.labels.icon : '#'} alt="" />
+                  </Link>
+                </td>
+                <td>
+                  <Link to={`/${pageNumber}/${beer.id}`}>{beer.name}</Link>
+                </td>
+                <td>{beer.abv || 'N/A'}</td>
+                <td>{beer.ibu || 'N/A'}</td>
+              </tr>
+            ))}
         </tbody>
       </table>
     </div>
