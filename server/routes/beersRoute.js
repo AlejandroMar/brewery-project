@@ -1,11 +1,12 @@
 const express = require('express');
 const axios = require('axios');
+const config = require('../config/config.json');
 // const chalk = require('chalk');
 // const debug = require('debug')('server');
 
 const router = express.Router();
 
-const apiUrl = process.env.BEER_URL;
+const apiUrl = config.API_URL;
 const apiKey = process.env.BEER_API_KEY;
 
 
