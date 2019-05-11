@@ -13,6 +13,8 @@ import BeerDetails from './components/BeerDetails';
 import Hero from './components/Hero';
 import Pagination from './components/Pagination';
 
+// const API_ENDPOINT = process.env.REACT_APP_API_ENDPOINT || 'http://production';
+
 class App extends React.Component {
   state = {
     beerList: [],
