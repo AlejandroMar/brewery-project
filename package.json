@@ -1,11 +1,14 @@
 {
   "name": "y",
   "version": "1.0.0",
+  "engines": {
+    "node": "10.15.3"
+  },
   "description": "beer app api",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js",
+    "start": "node server",
     "dev": "DEBUG=server,server:* nodemon server.js",
     "client": "npm start --prefix client",
     "both": "concurrently \"npm run dev\" \"npm run client\"",
