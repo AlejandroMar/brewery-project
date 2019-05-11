@@ -23,7 +23,6 @@ class App extends React.Component {
   };
 
   componentDidMount() {
-    return;
     // check if user types /1 or /1/:id in url
     // there is a small problem when url has /1 on componentDidMount
     // needs to be fixed
