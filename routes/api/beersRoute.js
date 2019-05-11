@@ -22,7 +22,7 @@ router.get('/', async (req, res) => {
         }
     };
     try {
-        const listOfBeers = await axios.get(`${apiUrl}beers/`, axiosParams);
+        const listOfBeers = await axios.get(`https://sandbox-api.brewerydb.com/v2/beers/`, axiosParams);
         res.json(listOfBeers.data.data);
     } catch (error) {
         res.json(error.msg);
