@@ -29,7 +29,7 @@ function Hero({ match, isLoading, beerList }) {
 
     return (
       <div className="jumbotron text-center hero" style={style}>
-        <h1 className="">{beerDetails.name}</h1>
+        <h1 className="mb-3 mt-4">{beerDetails.name}</h1>
         {beerDetails.style && (
           <>
             <p className="">
@@ -48,8 +48,8 @@ function Hero({ match, isLoading, beerList }) {
   // for list route
   return (
     <div className="jumbotron text-center hero">
-      <h1>Wellcome to the Brewery Api</h1>
-      <p>Click on view detalil to see beer details</p>
+      <h1 className="mb-3 mt-5">Wellcome to the Brewery Api</h1>
+      <p>Click on the beer's name to see its details</p>
     </div>
   );
 }
